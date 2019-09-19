@@ -1,0 +1,6 @@
+flask==1.0.2
+flask-wtf
+werkzeug>=0.15.3
+fastai>=1.0.52
+#
+torch

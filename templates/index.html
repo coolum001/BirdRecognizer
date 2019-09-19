@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Australian Urban Small Bird Recognizer</h1>
+
+<div>
+    <p>Welcome to the Australian Urban Small Bird Recognizer.</p>
+    <p>The Australian Museum has a list of the top 30 urban birds, and this website
+        allows you to submit a photograph of a bird, and have the species recognized automatically.
+    </p>
+    <p>The technical details of the recognizer:
+        <ul>
+            <li>Uses a fast.ai Convolution Neural Network;</li>
+            <li>Uses a RESNET50 architecture;</li>
+            <li>Trained on Google Image Search thumbnails of each bird species</li>
+        </ul>
+    </p>
+    <p>
+        Click <strong>"Upload"</strong> to go to the upload page,
+        click <strong>"Home"</strong> to return here at any time.
+    </p>
+</div>
+
+{% endblock %}

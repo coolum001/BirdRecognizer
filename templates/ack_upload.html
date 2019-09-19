@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1> Upload Details</h1>
+
+<div>
+    You sucessfully uploaded a file: {{filename}}<br>
+    File upload count: {{uploadcount}}
+</div>
+<hr>
+<div>
+    <p> Image Submitted</p>
+    <img src="{{ image64 }}" />
+    <br />
+    <hr />
+    <br />
+</div>
+<div>
+    <table id="species">
+        <tr>
+            <th>Common Name</th>
+            <th>Certainty of Identification</th>
+        </tr>
+
+        {% for guess in guesses %}
+        <tr>
+            <td>{{ guess[0] }}</td>
+            <td>{{ guess[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+<p>
+    <form action="/" method="get" novalidate>
+        {{form.submit() }}
+    </form>
+</p>
+
+{% endblock %}

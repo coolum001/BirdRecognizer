@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Upload Bird Image</h1>
+<hr>
+<form method=post enctype=multipart/form-data> <!-- <input type=file name=file style='width: 90%;'><br>
+    <input type=submit value=Upload>
+    -->
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.photo}}
+    </p>
+    <p>
+        {{form.submit() }}
+    </p>
+</form>
+{% endblock %}
